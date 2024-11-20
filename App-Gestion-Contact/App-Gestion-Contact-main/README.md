@@ -83,3 +83,7 @@ Delete unwanted contacts. // in case of the issue (the delete link should be as 
 http://localhost/App-Gestion-Contact/App-Gestion-Contact-main/includes/main.php?Id=7
 
 and not http://localhost/App-Gestion-Contact/includes/main.php?Id=7
+
+Screenshots:
+
+Kindly refer to screenshots folder for further clarification.
