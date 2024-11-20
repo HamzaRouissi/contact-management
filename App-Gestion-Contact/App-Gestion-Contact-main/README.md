@@ -87,3 +87,21 @@ and not http://localhost/App-Gestion-Contact/includes/main.php?Id=7
 Screenshots:
 
 Kindly refer to screenshots folder for further clarification.
+
+Important Notes on SQL Injection Prevention Based on Our Code
+
+Our application is built with careful consideration to mitigate SQL injection vulnerabilities. Below are the measures implemented specifically within the context of our code:
+
+Use of Prepared Statements
+Description: Prepared statements with placeholders are extensively used in our code to ensure that SQL queries are parameterized.
+
+Examples from Our Code:
+In the Create function:
+
+$requete = $this->connection->prepare("INSERT INTO Contacts (Name, Phone, Email, Adresse, Age, Country, FkUser) VALUES (?, ?, ?, ?, ?, ?, ?)");
+$requete->execute([$this->Name, $this->Phone, $this->Email, $this->Adresse, $this->Age, $this->Country, $IdUser]);
+
+Why It Works:
+
+The placeholders (?) ensure the database treats the input as data rather than part of the SQL query.
+This eliminates the risk of malicious input altering the SQL logic.
